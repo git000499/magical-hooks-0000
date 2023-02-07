@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/styles.css"],"names":[],"mappings":"AAGA,cAFE,sBAMF,CAJA,SAEE,cAAe,CACf,eACF","file":"main.5ed6c773.chunk.css","sourcesContent":[".App {\n  font-family: sans-serif;\n}\n.Navlink {\n  font-family: sans-serif;\n  margin: 0 1.5em;\n  text-align: left;\n}\n"]}
