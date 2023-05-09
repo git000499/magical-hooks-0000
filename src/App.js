@@ -5,6 +5,7 @@ import Main from "./components/main/main";
 import Blogs from "./components/blogs/blogs";
 import Questions from "./components/questions/questions";
 import Support from "./components/support/support";
+import Authentication from "./components/authentication/authentication";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/questions" element={<Questions />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/authentication" element={<Authentication />} />
         </Routes>
         <ol className="NavLink">
           <li className="NavLink">
@@ -35,6 +37,11 @@ export default function App() {
           <li className="NavLink">
             <NavLink className="NavLink" to="/support">
               Support
+            </NavLink>
+          </li>
+          <li className="NavLink">
+            <NavLink className="NavLink" to="/Authentication">
+              Authentication
             </NavLink>
           </li>
         </ol>
