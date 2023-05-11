@@ -11,48 +11,52 @@ const Authentication = () => {
         rel="stylesheet"
         type="text/css"
         charset="UTF-8"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       />
       <h1>Authentication</h1>
-      <div class="bd-example">
+
+      <main className="form-signin w-100 m-auto">
         <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+          <img
+            className="mb-4"
+            // src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+            alt=""
+            width="72"
+            height="57"
+          />
+          <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+
+          <div className="form-floating">
             <input
               type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
+              className="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
             />
-            <small id="emailHelp" class="form-text text-muted">
-              We'll never share your email with anyone else.
-            </small>
+            <label for="floatingInput">Email address</label>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+          <div className="form-floating">
             <input
               type="password"
-              class="form-control"
-              id="exampleInputPassword1"
+              className="form-control"
+              id="floatingPassword"
               placeholder="Password"
             />
+            <label for="floatingPassword">Password</label>
           </div>
-          <div class="form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1">
-              Check me out
+
+          <div className="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me" /> Remember me
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">
-            Submit
+          <button className="w-100 btn btn-lg btn-primary" type="submit">
+            Sign in
           </button>
+          <p className="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
         </form>
-      </div>
+      </main>
     </div>
   );
 };
