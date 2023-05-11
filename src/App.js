@@ -76,7 +76,9 @@ export default function App() {
         <ol className="NavLink">
           <li className="NavLink">
             <NavLink
-              className="NavLink"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? css.activeLink : ""
+              }
               to="/"
               activeClassName={css.activeLink}
             >
@@ -94,17 +96,32 @@ export default function App() {
             </NavLink>
           </li>
           <li className="NavLink">
-            <NavLink className="NavLink" to="/questions">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? css.activeLink : ""
+              }
+              to="/questions"
+            >
               Questions
             </NavLink>
           </li>
           <li className="NavLink">
-            <NavLink className="NavLink" to="/support">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? css.activeLink : ""
+              }
+              to="/support"
+            >
               Support
             </NavLink>
           </li>
           <li className="NavLink">
-            <NavLink className="NavLink" to="/Authentication">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? css.activeLink : ""
+              }
+              to="/Authentication"
+            >
               Authentication
             </NavLink>
           </li>
