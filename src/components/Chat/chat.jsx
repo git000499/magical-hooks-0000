@@ -1,15 +1,21 @@
 import React from "react";
+import imgg from "./avatar-1.webp";
+import "./chat.css";
 
 const Chat = () => {
   return (
-    <section className="pb-4">
-      <div className="bg-white border rounded-5">
-        <section
-          className="p-4 w-100"
-          style="background-color: #eee; border-radius: .5rem .5rem 0 0;"
-        >
+    <>
+      <link
+        crossorigin
+        rel="stylesheet"
+        type="text/css"
+        charset="UTF-8"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      />
+      <section style={{ backgroundColor: "#eee" }}>
+        <div className="container py-5">
           <div className="row">
-            <div className="col-md-6 col-lg-5 col-xl-5 mb-4 mb-md-0">
+            <div className="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
               <h5 className="font-weight-bold mb-3 text-center text-lg-start">
                 Member
               </h5>
@@ -19,7 +25,7 @@ const Chat = () => {
                   <ul className="list-unstyled mb-0">
                     <li
                       className="p-2 border-bottom"
-                      style="background-color: #eee;"
+                      style={{ backgroundColor: "#eee" }}
                     >
                       <a href="#!" className="d-flex justify-content-between">
                         <div className="d-flex flex-row">
@@ -176,7 +182,7 @@ const Chat = () => {
               </div>
             </div>
 
-            <div className="col-md-6 col-lg-7 col-xl-7">
+            <div className="col-md-6 col-lg-7 col-xl-8">
               <ul className="list-unstyled">
                 <li className="d-flex justify-content-between mb-4">
                   <img
@@ -253,66 +259,23 @@ const Chat = () => {
                       id="textAreaExample2"
                       rows="4"
                     ></textarea>
-                    <label
-                      className="form-label"
-                      for="textAreaExample2"
-                      style="margin-left: 0px;"
-                    >
+                    <label className="form-label" for="textAreaExample2">
                       Message
                     </label>
-                    <div className="form-notch">
-                      <div
-                        className="form-notch-leading"
-                        style="width: 9px;"
-                      ></div>
-                      <div
-                        className="form-notch-middle"
-                        style="width: 60px;"
-                      ></div>
-                      <div className="form-notch-trailing"></div>
-                    </div>
                   </div>
                 </li>
                 <button
                   type="button"
                   className="btn btn-info btn-rounded float-end"
-                  style=""
                 >
                   Send
                 </button>
               </ul>
             </div>
           </div>
-        </section>
-
-        <div className="p-4 text-center border-top mobile-hidden">
-          <a
-            className="btn btn-link px-3"
-            data-mdb-toggle="collapse"
-            href="#example3"
-            role="button"
-            aria-expanded="true"
-            aria-controls="example3"
-            data-ripple-color="hsl(0, 0%, 67%)"
-            style=""
-          >
-            <i className="fas fa-code me-md-2"></i>
-            <span className="d-none d-md-inline-block">Show code</span>
-          </a>
-
-          <a
-            className="btn btn-link px-3"
-            data-ripple-color="hsl(0, 0%, 67%)"
-            style=""
-          >
-            <i className="fas fa-file-code me-md-2 pe-none"></i>
-            <span className="d-none d-md-inline-block export-to-snippet pe-none">
-              Edit in sandbox
-            </span>
-          </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
