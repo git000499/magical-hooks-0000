@@ -6,6 +6,7 @@ import Blogs from "./components/blogs/blogs";
 import Questions from "./components/questions/questions";
 import Support from "./components/support/support";
 import Authentication from "./components/authentication/authentication";
+import Chat from "./components/chat/chat";
 import css from "./components/main/main.module.css";
 
 export default function App() {
@@ -61,6 +62,11 @@ export default function App() {
                   Authentication
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="chat">
+                  Chat
+                </NavLink>
+              </li>
             </ul>
             <span className="navbar-text">Navbar</span>
           </div>
@@ -71,6 +77,7 @@ export default function App() {
           <Route path="/questions" element={<Questions />} />
           <Route path="/support" element={<Support />} />
           <Route path="/authentication" element={<Authentication />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
 
         <ol className="NavLink">
@@ -123,6 +130,16 @@ export default function App() {
               to="/Authentication"
             >
               Authentication
+            </NavLink>
+          </li>
+          <li className="NavLink">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? css.activeLink : ""
+              }
+              to="/chat"
+            >
+              Chat
             </NavLink>
           </li>
         </ol>
