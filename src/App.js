@@ -12,8 +12,29 @@ import Map from "./components/maps/map";
 
 export default function App() {
   const Nav_link = () => {
-    const Nav_link_arr = ["link1", "link2", "link3", "link4"];
-    const Nav_link_list = Nav_link_arr.map((link) => <li>{link}</li>);
+    const Nav_link_arr = [
+      ["Home", "/"],
+      ["Blogs", "/blogs"],
+      ["Questions", "/questions"],
+      ["Support", "/support"],
+      ["Authentication", "/authentication"],
+      ["Chat", "/chat"],
+      ["Map", "/map"],
+    ];
+    const Nav_link_list = Nav_link_arr.map((link) => (
+      // <li>{link}</li>
+      <li className="NavLink">
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? css.activeLink : ""
+          }
+          to={link[1]}
+          activeClassName={css.activeLink}
+        >
+          {link[0]}
+        </NavLink>
+      </li>
+    ));
     return <ol>{Nav_link_list}</ol>;
   };
 
