@@ -8,8 +8,15 @@ import Support from "./components/support/support";
 import Authentication from "./components/authentication/authentication";
 import Chat from "./components/Chat/chat";
 import css from "./components/main/main.module.css";
+import Map from "./components/maps/map";
 
 export default function App() {
+  const Nav_link = () => {
+    const Nav_link_arr = ["link1", "link2", "link3", "link4"];
+    const Nav_link_list = Nav_link_arr.map((link) => <li>{link}</li>);
+    return <ol>{Nav_link_list}</ol>;
+  };
+
   return (
     <div className="App">
       <link
@@ -22,7 +29,7 @@ export default function App() {
       <BrowserRouter>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">
-            Navbar w/ text
+            Navbar
           </a>
           <button
             class="navbar-toggler"
@@ -78,6 +85,8 @@ export default function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/authentication" element={<Authentication />} />
           <Route path="/chat" element={<Chat />} />
+
+          <Route path="/map" element={<Map />} />
         </Routes>
 
         <ol className="NavLink">
@@ -142,7 +151,18 @@ export default function App() {
               Chat
             </NavLink>
           </li>
+          <li className="NavLink">
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? css.activeLink : ""
+              }
+              to="/map"
+            >
+              Map
+            </NavLink>
+          </li>
         </ol>
+        <Nav_link />
       </BrowserRouter>
     </div>
   );
