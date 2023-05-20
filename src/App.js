@@ -11,6 +11,17 @@ import css from "./components/main/main.module.css";
 import Map from "./components/maps/map";
 
 export default function App() {
+  ///////////////////
+  const Nav_link_arr = [
+    ["Home", "/"],
+    ["Blogs", "/blogs"],
+    ["Questions", "/questions"],
+    ["Support", "/support"],
+    ["Authentication", "/authentication"],
+    ["Chat", "/chat"],
+    ["Map", "/map"],
+  ];
+  ///////////////////
   const Nav_link = () => {
     const Nav_link_arr = [
       ["Home", "/"],
@@ -35,8 +46,16 @@ export default function App() {
         </NavLink>
       </li>
     ));
-    return <ol>{Nav_link_list}</ol>;
+    return <ol className="NavLink">{Nav_link_list}</ol>;
   };
+  /////////////////////
+  const Nav_route = () => {
+    const Nav_route_list = Nav_link_arr.map((link) => (
+      <Route path={link[1]} element={"" + link[0] + ""} />
+    ));
+    return <h1>{Nav_route_list}</h1>;
+  };
+  /////////////////////
 
   return (
     <div className="App">
@@ -106,84 +125,11 @@ export default function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/authentication" element={<Authentication />} />
           <Route path="/chat" element={<Chat />} />
-
           <Route path="/map" element={<Map />} />
         </Routes>
 
-        <ol className="NavLink">
-          <li className="NavLink">
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? css.activeLink : ""
-              }
-              to="/"
-              activeClassName={css.activeLink}
-            >
-              HOME
-            </NavLink>
-          </li>
-          <li className="NavLink">
-            <NavLink
-              to="/blogs"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? css.activeLink : ""
-              }
-            >
-              Blogs
-            </NavLink>
-          </li>
-          <li className="NavLink">
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? css.activeLink : ""
-              }
-              to="/questions"
-            >
-              Questions
-            </NavLink>
-          </li>
-          <li className="NavLink">
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? css.activeLink : ""
-              }
-              to="/support"
-            >
-              Support
-            </NavLink>
-          </li>
-          <li className="NavLink">
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? css.activeLink : ""
-              }
-              to="/Authentication"
-            >
-              Authentication
-            </NavLink>
-          </li>
-          <li className="NavLink">
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? css.activeLink : ""
-              }
-              to="/chat"
-            >
-              Chat
-            </NavLink>
-          </li>
-          <li className="NavLink">
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? css.activeLink : ""
-              }
-              to="/map"
-            >
-              Map
-            </NavLink>
-          </li>
-        </ol>
         <Nav_link />
+        <Nav_route />
       </BrowserRouter>
     </div>
   );
