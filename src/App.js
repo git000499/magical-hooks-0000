@@ -11,7 +11,7 @@ import css from "./components/main/main.module.css";
 import Map from "./components/maps/map";
 
 export default function App() {
-  ///////////////////
+  ///////////////////array route
   const Nav_link_arr = [
     ["Home", "/"],
     ["Blogs", "/blogs"],
@@ -22,7 +22,7 @@ export default function App() {
     ["Map", "/map"],
     ["Support", "/m"],
   ];
-  ///////////////////
+  ///////////////////add NavLink
   const Nav_link = () => {
     const Nav_link_arr = [
       ["Home", "/"],
@@ -49,7 +49,7 @@ export default function App() {
     ));
     return <ol className="NavLink">{Nav_link_list}</ol>;
   };
-  /////////////////////
+  /////////////////////add route
   const Nav_route = () => {
     const Nav_route_list = Nav_link_arr.map((link) => (
       <Route path={link[1]} element={link[0]} />
