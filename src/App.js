@@ -20,6 +20,7 @@ export default function App() {
     ["Authentication", "/authentication"],
     ["Chat", "/chat"],
     ["Map", "/map"],
+    ["Support", "/m"],
   ];
   ///////////////////
   const Nav_link = () => {
@@ -51,9 +52,9 @@ export default function App() {
   /////////////////////
   const Nav_route = () => {
     const Nav_route_list = Nav_link_arr.map((link) => (
-      <Route path={link[1]} element={"" + link[0] + ""} />
+      <Route path={link[1]} element={link[0]} />
     ));
-    return <h1>{Nav_route_list}</h1>;
+    return <Routes>{Nav_route_list}</Routes>;
   };
   /////////////////////
 
@@ -67,12 +68,12 @@ export default function App() {
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       />
       <BrowserRouter>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <a className="navbar-brand" href="#">
             Navbar
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarText"
@@ -127,7 +128,7 @@ export default function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/map" element={<Map />} />
         </Routes>
-
+        <Nav_route />
         <Nav_link />
         <Nav_route />
       </BrowserRouter>
