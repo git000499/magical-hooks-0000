@@ -13,14 +13,14 @@ import Map from "./components/maps/map";
 export default function App() {
   ///////////////////array route
   const Nav_link_arr = [
-    ["Home", "/"],
-    ["Blogs", "/blogs"],
-    ["Questions", "/questions"],
-    ["Support", "/support"],
-    ["Authentication", "/authentication"],
-    ["Chat", "/chat"],
-    ["Map", "/map"],
-    ["Support", "/m"],
+    ["Home", "/", <Main />],
+    ["Blogs", "/blogs", <Blogs />],
+    ["Questions", "/questions", <Questions />],
+    ["Support", "/support", <Support />],
+    ["Authentication", "/authentication", <Authentication />],
+    ["Chat", "/chat", <Chat />],
+    ["Map", "/map", <Map />],
+    ["Support", "/m", <div />],
   ];
   ///////////////////add NavLink
   const Nav_link = () => {
@@ -49,10 +49,10 @@ export default function App() {
     ));
     return <ol className="NavLink">{Nav_link_list}</ol>;
   };
-  /////////////////////add route
+  /////////////////////add route {/*  <Route path={link[1]} element={link[0]} /> */}
   const Nav_route = () => {
     const Nav_route_list = Nav_link_arr.map((link) => (
-      <Route path={link[1]} element={link[0]} />
+      <Route path={link[1]} element={link[2]} />
     ));
     return <Routes>{Nav_route_list}</Routes>;
   };
@@ -60,13 +60,13 @@ export default function App() {
 
   return (
     <div className="App">
-      <link
+      {/*  <link
         crossorigin
         rel="stylesheet"
         type="text/css"
         charset="UTF-8"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      />
+      /> */}
       <BrowserRouter>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="#">
@@ -119,7 +119,7 @@ export default function App() {
             <span className="navbar-text">Navbar</span>
           </div>
         </nav>
-        <Routes>
+        {/*  <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/questions" element={<Questions />} />
@@ -127,10 +127,9 @@ export default function App() {
           <Route path="/authentication" element={<Authentication />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/map" element={<Map />} />
-        </Routes>
+        </Routes> */}
         <Nav_route />
         <Nav_link />
-        <Nav_route />
       </BrowserRouter>
     </div>
   );
