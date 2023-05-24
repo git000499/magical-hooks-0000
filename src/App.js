@@ -1,4 +1,11 @@
-import { BrowserRouter, Form, Route, Routes, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Form,
+  Route,
+  Routes,
+  NavLink,
+  Link,
+} from "react-router-dom";
 
 import "./styles.css";
 import Main from "./components/main/main";
@@ -20,11 +27,12 @@ export default function App() {
     ["Authentication", "/authentication", <Authentication />],
     ["Chat", "/chat", <Chat />],
     ["Map", "/map", <Map />],
-    ["Support", "/m", <div />],
+    ["Support", "/m", <div>mSupport</div>],
   ];
   ///////////////////add NavLink
   const Nav_link = () => {
-    const Nav_link_arr = [
+    {
+      /* const Nav_link_arr = [
       ["Home", "/"],
       ["Blogs", "/blogs"],
       ["Questions", "/questions"],
@@ -32,7 +40,8 @@ export default function App() {
       ["Authentication", "/authentication"],
       ["Chat", "/chat"],
       ["Map", "/map"],
-    ];
+    ];   */
+    }
     const Nav_link_list = Nav_link_arr.map((link) => (
       // <li>{link}</li>
       <li className="NavLink">
@@ -57,6 +66,21 @@ export default function App() {
     return <Routes>{Nav_route_list}</Routes>;
   };
   /////////////////////
+  const Nav_bar = () => {
+    const Nav_bar_list = Nav_link_arr.map((link) => (
+      <li className="nav-item">
+        <NavLink className="nav-link" to={link[1]}>
+          {link[0]}
+        </NavLink>
+      </li>
+    ));
+    return (
+      <div className="collapse navbar-collapse" id="navbarText">
+        <ul className="navbar-nav mr-auto">{Nav_bar_list}</ul>
+        <span className="navbar-text">Navbar</span>
+      </div>
+    );
+  };
 
   return (
     <div className="App">
@@ -118,6 +142,7 @@ export default function App() {
             </ul>
             <span className="navbar-text">Navbar</span>
           </div>
+          <Nav_bar />
         </nav>
         {/*  <Routes>
           <Route path="/" element={<Main />} />
