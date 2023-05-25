@@ -31,17 +31,6 @@ export default function App() {
   ];
   ///////////////////add NavLink
   const Nav_link = () => {
-    {
-      /* const Nav_link_arr = [
-      ["Home", "/"],
-      ["Blogs", "/blogs"],
-      ["Questions", "/questions"],
-      ["Support", "/support"],
-      ["Authentication", "/authentication"],
-      ["Chat", "/chat"],
-      ["Map", "/map"],
-    ];   */
-    }
     const Nav_link_list = Nav_link_arr.map((link) => (
       // <li>{link}</li>
       <li className="NavLink">
@@ -70,7 +59,7 @@ export default function App() {
     const Nav_bar_list = Nav_link_arr.map((link) => (
       <li className="nav-item">
         <NavLink className="nav-link" to={link[1]}>
-          {link[0]}
+          {link[0]} {/* <span className="sr-only">(current)</span> */}
         </NavLink>
       </li>
     ));
@@ -107,41 +96,7 @@ export default function App() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarText">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <NavLink className="nav-link" to="/">
-                  Home <span className="sr-only">(current)</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/blogs">
-                  Blogs
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/Questions">
-                  Questions
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="Support">
-                  Support
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="Authentication">
-                  Authentication
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="chat">
-                  Chat
-                </NavLink>
-              </li>
-            </ul>
-            <span className="navbar-text">Navbar</span>
-          </div>
+
           <Nav_bar />
         </nav>
         {/*  <Routes>
