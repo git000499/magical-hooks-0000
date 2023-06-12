@@ -1,11 +1,4 @@
-import {
-  BrowserRouter,
-  Form,
-  Route,
-  Routes,
-  NavLink,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, NavLink, Link } from "react-router-dom";
 
 //import "./styles.css";
 import Main from "./components/main/main";
@@ -13,7 +6,7 @@ import Blogs from "./components/blogs/blogs";
 import Questions from "./components/questions/questions";
 import Support from "./components/support/support";
 import Authentication from "./components/authentication/authentication";
-import Chat from "./components/Chat/chat";
+import Chat from "./components/chat/chat";
 //import css from "./components/main/main.module.css";
 import Map from "./components/maps/map";
 
