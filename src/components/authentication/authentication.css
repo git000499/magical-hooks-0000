@@ -1,0 +1,40 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+element.style {
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+.m-auto {
+  margin: auto !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+main {
+  display: block;
+}
+.text-center {
+  text-align: center !important;
+}
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
