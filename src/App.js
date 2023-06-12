@@ -7,7 +7,7 @@ import {
   Link,
 } from "react-router-dom";
 
-import "./styles.css";
+//import "./styles.css";
 import Main from "./components/main/main";
 import Blogs from "./components/blogs/blogs";
 import Questions from "./components/questions/questions";
@@ -109,7 +109,7 @@ export default function App() {
           <Route path="/map" element={<Map />} />
         </Routes> */}
         <Nav_route />
-        <Nav_link />
+        {/*<Nav_link />*/}
       </BrowserRouter>
     </div>
   );

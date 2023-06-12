@@ -20,7 +20,7 @@ element.style {
 ::before {
   box-sizing: border-box;
 }
-таблиця стилів агента користувача main {
+main {
   display: block;
 }
 .text-center {

@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import css from "./authentication.css";
+import "./authentication.css";
 //import url('href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 
 const Authentication = () => {
   return (
     <div>
-      <link
+      {/*<link
         crossorigin
         rel="stylesheet"
         type="text/css"
         charset="UTF-8"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      />
+      />*/}
       <h1>Authentication</h1>
 
       <main className="form-signin w-100 m-auto">
