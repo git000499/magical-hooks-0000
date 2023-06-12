@@ -6,7 +6,7 @@ import Blogs from "./components/blogs/blogs";
 import Questions from "./components/questions/questions";
 import Support from "./components/support/support";
 import Authentication from "./components/authentication/authentication";
-import Chat from "./components/chat/chat";
+import Chat from "./components/chat/chat.jsx";
 //import css from "./components/main/main.module.css";
 import Map from "./components/maps/map";
 
