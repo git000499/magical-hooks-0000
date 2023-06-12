@@ -14,7 +14,7 @@ import Questions from "./components/questions/questions";
 import Support from "./components/support/support";
 import Authentication from "./components/authentication/authentication";
 import Chat from "./components/Chat/chat";
-import css from "./components/main/main.module.css";
+//import css from "./components/main/main.module.css";
 import Map from "./components/maps/map";
 
 export default function App() {
@@ -70,7 +70,7 @@ export default function App() {
       </div>
     );
   };
-/////////////////////////
+  /////////////////////////
   return (
     <div className="App">
       {/*  <link
