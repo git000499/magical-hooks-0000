@@ -5,7 +5,7 @@ const Main = () => {
   return (
     <>
       <h1> Main </h1>
-      <button>jgjghj</button>
+      <button>кнопка</button>
     </>
   );
 };
