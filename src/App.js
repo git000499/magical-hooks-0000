@@ -90,7 +90,7 @@ export default function App() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <Nav_bar />
+          {/*<Nav_bar />*/}
         </nav>
         {/*  <Routes>
           <Route path="/" element={<Main />} />
@@ -101,7 +101,7 @@ export default function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/map" element={<Map />} />
         </Routes> */}
-        <Nav_route />
+        {/*<Nav_route /> */}
         {/*<Nav_link />*/}
       </BrowserRouter>
     </div>
